@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+html {
+  font-size: 11px;
+}
+
+body{
+  width: 100vw ;
+}
+
+
+
+/**
+*###################
+*## header ##
+*###################
+*/
+
+:root {
+  --color-blue: rgb(54, 13, 255);
+  --color-grey: #d3d3d3;
+  --color-grey-light: rgb(117, 117, 117);
+}
+
+.menu {
+  margin: 3vmin;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+header > div.menu > div > a {
+  color: black;
+  text-decoration: none;
+  font-size: 3vmin;
+}
+
+header > div > nav ul li {
+  display: none;
+}
+
+div.car-img {
+  width: 6vmin;
+  border: solid var(--color-grey);
+  padding: 3px;
+  border-width: 2px;
+  border-radius: 3px;
+}
+
+/**
+*###################
+*## Main##
+*###################
+*/
+p {
+  font-size: 3vmin;
+  line-height: 4vmin;
+  color: var(--color-grey-light);
+}
+
+h1 {
+  font-size: 10vmin;
+  font-weight:bold;
+  line-height: 12vmin;
+}
+
+h2 {
+  font-size: 8vmin;
+  font-weight:bold;
+  line-height: 12vmin;
+}
+
+main > section.regulatory {
+  display: flex;
+  margin-left: 2vmin;
+  flex-direction: column;
+  margin: 4vmin;
+  padding: 1vmin ;
+  line-height: 10vmin;
+}
+
+/**
+*###################
+*## botones primer bloque##
+*###################
+*/
+
+main > section.regulatory > div.button-regulatory {
+  margin-top: 15%;
+}
+
+main > section.regulatory > div.button-regulatory a:first-child {
+  border-radius: 2px;
+  background-color: var(--color-blue);
+  margin-top: 10vmin;
+  padding: 2vmin 2vmin 2vmin 2vmin;
+  color: white;
+  text-decoration: none;
+}
+
+main > section.regulatory > div.button-regulatory a:last-child {
+  border-radius: 2px;
+  margin-top: 5vmin;
+  padding: 2vmin 2vmin 2vmin 2vmin;
+  border: solid var(--color-blue);
+  text-decoration: none;
+  color:var(--color-blue);
+}
+
+/**
+*###################
+*## checks ##
+*###################
+*/
+
+/**
+* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container#aligning_content_on_the_main_axis
+*/
+.block-row {
+  margin-left: 5vmin;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.list-check img {
+  width: 5vmin;
+}
+
+.list-check {
+  list-style: none;
+}
+
+/**
+*###################
+*## safety content ##
+*###################
+*/
+
+.safety-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.text-blue {
+  display:flex;
+  color: var(--color-blue);
+  flex-direction: row;
+  list-style: none;
+  align-items: flex-start;
+  
+  gap: 4vmin;
+}
+
+span-margin-right {
+  margin-right: 8%;
+}
+
