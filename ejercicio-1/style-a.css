@@ -5,15 +5,18 @@
   box-sizing: border-box;
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
+
 html {
-  font-size: 11px;
+  font-size: 10px;
 }
 
-body{
-  width: 100vw ;
+body {
+  max-width: 100vw ;
 }
 
-
+img {
+  max-width: 90%;
+}
 
 /**
 *###################
@@ -22,9 +25,10 @@ body{
 */
 
 :root {
-  --color-blue: rgb(54, 13, 255);
+  --color-blue:#2157ff;
   --color-grey: #d3d3d3;
   --color-grey-light: rgb(117, 117, 117);
+  --color-grey-grid:#f7f9fa;
 }
 
 .menu {
@@ -42,10 +46,6 @@ header > div.menu > div > a {
   font-size: 3vmin;
 }
 
-header > div > nav ul li {
-  display: none;
-}
-
 div.car-img {
   width: 6vmin;
   border: solid var(--color-grey);
@@ -60,30 +60,51 @@ div.car-img {
 *###################
 */
 p {
-  font-size: 3vmin;
-  line-height: 4vmin;
+  margin-top: 5vmin;
+  margin-bottom:1vmin ;
+  font-size: 4vmin;
+  line-height: 5vmin;
   color: var(--color-grey-light);
+  font-weight: 350;
 }
 
 h1 {
-  font-size: 10vmin;
-  font-weight:bold;
-  line-height: 12vmin;
+  font-size: 13.5vmin;
+  font-weight: 500;
+  line-height: 16.6vmin;
 }
 
 h2 {
-  font-size: 8vmin;
-  font-weight:bold;
+  font-size: 11vmin;
   line-height: 12vmin;
+  font-weight: 500 ;
 }
 
-main > section.regulatory {
+h3{
+  font-size: 6vmin;
+  font-weight:500;
+  line-height: 12vmin;
+  color: white;
+  margin-top: 10vmin;
+  margin-bottom: 10vmin ;
+}
+
+h4{
+  font-size: 8vmin;
+  font-weight:500;
+  line-height: 9vmin;
+  color: black;
+  margin-top: 10vmin;
+  margin-bottom: 10vmin ;
+}
+.regulatory {
   display: flex;
-  margin-left: 2vmin;
   flex-direction: column;
-  margin: 4vmin;
   padding: 1vmin ;
   line-height: 10vmin;
+  margin-bottom: 5vmin;
+  margin-top: 2.5vmin;
+  padding: 90px 20px 100px 20px;
 }
 
 /**
@@ -92,26 +113,31 @@ main > section.regulatory {
 *###################
 */
 
-main > section.regulatory > div.button-regulatory {
+.button-regulatory {
   margin-top: 15%;
+  margin-bottom: 8vmin;
+
 }
 
-main > section.regulatory > div.button-regulatory a:first-child {
+.button-regulatory a:first-child {
   border-radius: 2px;
   background-color: var(--color-blue);
   margin-top: 10vmin;
   padding: 2vmin 2vmin 2vmin 2vmin;
   color: white;
   text-decoration: none;
+  font-size: 4.7vmin;
+  text-align: center;
+  margin-right: 5vmin;
 }
 
-main > section.regulatory > div.button-regulatory a:last-child {
+.button-regulatory a:last-child {
   border-radius: 2px;
-  margin-top: 5vmin;
   padding: 2vmin 2vmin 2vmin 2vmin;
   border: solid var(--color-blue);
   text-decoration: none;
   color:var(--color-blue);
+  font-size: 3.9vmin;
 }
 
 /**
@@ -123,23 +149,31 @@ main > section.regulatory > div.button-regulatory a:last-child {
 /**
 * https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container#aligning_content_on_the_main_axis
 */
+
+.block {
+  font-size: 4vmin;
+  padding: 6vmin;
+  overflow-y: auto;
+  white-space: nowrap;
+  border-top: solid var(--color-grey);
+  border-bottom: solid var(--color-grey);
+  border-width: thin;
+}
+
 .block-row {
-  margin-left: 5vmin;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-  overflow-x: auto;
+  display: inline;
 }
 
 .list-check img {
   width: 5vmin;
+  margin-left: 1vmin;
+  margin-right: 1vmin;
 }
 
 .list-check {
   list-style: none;
 }
+
 
 /**
 *###################
@@ -154,16 +188,416 @@ main > section.regulatory > div.button-regulatory a:last-child {
 }
 
 .text-blue {
-  display:flex;
+  display: flex;
   color: var(--color-blue);
   flex-direction: row;
   list-style: none;
   align-items: flex-start;
-  
   gap: 4vmin;
+  margin-top: 8vmin;
+  margin-bottom: 6vmin;
+  font-size: 4.5vmin;
 }
 
-span-margin-right {
+.span-margin-right {
   margin-right: 8%;
+  color: black;
+  font-weight: 450;
 }
 
+/**
+*###################
+*## grid ##
+*###################
+*/
+
+
+.grid-past-report {
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: 100%;
+
+} 
+
+.report-image-grid {
+  max-width: 80vmin;
+  margin-top: 16vmin;
+  justify-content: center;
+  
+}
+
+.background-grid{
+  background-color: var(--color-grey-grid);
+  padding: 50px 20px 100px 20px;
+  border: solid var(--color-grey);
+  border-width: thin;
+}
+
+/**
+*###################
+*## Month-plans ##
+*###################
+*/
+
+.month-plan{
+  margin-top: 20vmin ;
+  background-color: var(--color-blue);
+  color: white;
+  padding: 30px 20px 100px 20px;
+
+}
+
+.block-column {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-items: center;
+  line-height: 10vmin;
+  width: 100%;
+
+
+}
+
+.block-column img {
+  width: 5vmin;
+  margin-right: 3vmin;
+}
+
+#text-white {
+  color: white;
+  font-size: 5vmin;
+  line-height: 9vmin;
+  font-weight:400 ;
+}
+
+.month-plan ul li{
+  font-size: 4.5vmin;
+  
+}
+
+/**
+*###################
+*## botones bloque azul##
+*###################
+*/
+
+.button-month-plan a:first-child{
+  border-radius: 2px;
+  background-color: white;
+  margin-top: 10vmin;
+  padding: 2vmin 2vmin 2vmin 2vmin;
+  color:var(--color-blue);
+  text-decoration: none;
+  font-size: 6vmin;
+  text-align: center;
+  margin-right: 5vmin;
+  
+}
+
+.button-month-plan a:last-child{
+  border-radius: 2px;
+  padding: 2vmin 2vmin 2vmin 2vmin;
+  border: solid white;
+  text-decoration: none;
+  color:white;
+  font-size: 5.3vmin;
+  
+
+}
+
+.month-plan ul li:last-child{
+  margin-bottom: 15vmin;
+  
+}
+
+/**
+*###################
+*## year-plan ##
+*###################
+*/
+
+.year-plan{
+  background-color: black;
+  color: white;
+  padding: 30px 20px 100px 20px;
+
+}
+
+/**
+*###################
+*## botones bloque negro##
+*###################
+*/
+
+.button-year-plan a:first-child{
+  border-radius: 2px;
+  background-color: white;
+  margin-top: 10vmin;
+  padding: 2vmin 2vmin 2vmin 2vmin;
+  color:black;
+  text-decoration: none;
+  font-size: 6vmin;
+  text-align: center;
+  margin-right: 5vmin;
+  
+}
+
+.button-year-plan a:last-child{
+  border-radius: 2px;
+  padding: 2vmin 2vmin 2vmin 2vmin;
+  border: solid white;
+  text-decoration: none;
+  color:white;
+  font-size: 5.3vmin;
+}
+
+.year-plan ul li:last-child{
+  margin-bottom: 15vmin;
+  
+}
+
+.year-plan ul li{
+  font-size: 4.5vmin;
+  
+}
+
+/**
+*###################
+*## supporting-global ##
+*###################
+*/
+
+.supporting-global {
+  background-color: var(--color-grey-grid);
+  padding: 50px 20px 100px 20px;
+  border: solid var(--color-grey);
+  border-width: thin;
+  margin-top: 10vmin ;
+
+}
+
+#text-supporting {
+  font-size: 5vmin;
+  line-height: 7vmin;
+  font-weight:300;
+  margin-bottom: 15vmin;
+}
+
+.button-about {
+    border-radius: 2px;
+    padding: 2vmin 2vmin 2vmin 2vmin;
+    border: solid var(--color-grey);
+    text-decoration: none;
+    color: black;
+    font-size: 5.3vmin;
+    border-width: medium;
+
+}
+
+/**
+*###################
+*## footer ##
+*###################
+*/
+
+footer {
+  margin: 5vmin;
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: center;
+}
+
+.logo-foot{
+  max-width: 15vmin;
+  margin-right: 3vmin;
+}
+
+#text-footer{
+  font-size: 4.2vmin;
+  font-weight: 350;
+}
+
+@media (min-width:600px) {
+  h1 { 
+    font-size: 8vmin;
+    line-height: 10vmin
+  }
+  h2 {
+    font-size: 6vmin;
+  }
+  h3{
+    font-size: 4vmin;
+    font-weight:500;
+    line-height: 10vmin;
+    margin-top: 3vmin;
+    margin-bottom: 2vmin;
+  }
+  h4 {
+    font-size: 4vmin;
+    line-height: 7vmin;
+    margin-top: 1vmin;
+    margin-bottom: 3vmin;
+  }
+
+  p {
+    margin-top: 2vmin;
+    margin-bottom:1vmin ;
+    font-size: 2.4vmin;
+    line-height: 4vmin;
+    font-weight: 350;
+  }
+  .regulatory{
+    margin-bottom: 5vmin;
+    margin-top: 2.5vmin;
+    padding: 30px 20px 20px 20px;
+  }
+  .button-regulatory{
+    margin-top: 6%;
+    margin-bottom: 0vmin
+  }
+  .button-regulatory a:first-child {
+    font-size: 2vmin; 
+  }
+  .button-regulatory a:last-child{
+    font-size: 1.8vmin;
+  }
+  .block{
+    font-size: 2.5vmin ;
+  }
+
+  .list-check img {
+    width: 3vmin;
+    margin-left: 0.5vmin;
+    margin-right: 0.5vmin;
+  }
+
+  .text-blue {
+    font-size: 2vmin;
+    margin-top: 2vmin;
+    margin-bottom: 0vmin;
+
+  }
+  .report-image {
+    max-width: 50vmin;
+    margin-bottom: 0vmin;
+  }
+
+  .report-image-grid {
+    margin-top: 8vmin;
+    justify-content: center;
+    
+  }
+  .background-grid{
+    background-color: var(--color-grey-grid);
+    padding: 40px 20px 80px 20px;
+    border: solid var(--color-grey);
+    border-width: thin;
+  }
+
+  .month-plan{
+    margin-top: 10vmin ;
+    padding: 30px 20px 50px 20px;
+  }
+  #text-white {
+    font-size: 2.8vmin;
+    line-height: 4.5vmin;
+    font-weight:390 ;
+  }
+  .month-plan ul li{
+    font-size: 2.8vmin; 
+  }
+
+  .block-column img {
+    width: 3vmin;
+    margin-right: 2vmin;
+  }
+  .block-column {
+    line-height: 6vmin;
+  }
+  .button-month-plan a:first-child{
+    margin-top: 5vmin;
+    font-size: 2vmin;
+    margin-right: 4vmin;  
+  }
+
+  .button-month-plan a:last-child{
+    font-size: 1.8vmin;
+  }
+  .month-plan ul li:last-child{
+    margin-bottom: 10vmin;
+    
+  }
+  .button-year-plan a:first-child{
+    margin-top: 5vmin;
+    font-size: 2vmin;
+    margin-right: 4vmin; 
+    
+  }
+
+  .button-year-plan a:last-child{
+    font-size: 1.8vmin;
+  }
+
+  .year-plan ul li:last-child{
+    margin-bottom: 10vmin;
+    
+  }
+
+  .year-plan ul li{
+    font-size: 2.8vmin;
+    
+  }
+
+  .supporting-global {
+    margin-top: 6vmin ;
+
+  }
+
+  #text-supporting {
+    font-size: 2.4vmin;
+    line-height: 4vmin;
+    margin-bottom: 8vmin ;
+  }
+
+  .button-about {
+      border-radius: 2px;
+      font-size: 1.8vmin;
+  }
+
+  footer {
+    margin: 5vmin;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center;
+  }
+
+  .logo-foot{
+    max-width: 10vmin;
+    margin-right: 3vmin;
+  }
+
+  #text-footer{
+    font-size: 3vmin;
+    font-weight: 350;
+  }
+}
+
+@media (min-width:750px) {
+  h1 { 
+    font-size: 12vmin;
+    line-height: 13vmin
+  }
+  p {
+    margin-top: 5vmin;
+    margin-bottom:2vmin;
+    font-size: 2.4vmin;
+    line-height: 4vmin;
+    font-weight: 400;
+  }
+  .block {
+    font-size: 2.5vmin;
+    padding: 6vmin;
+  }
+
+}
