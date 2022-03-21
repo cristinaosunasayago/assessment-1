@@ -584,6 +584,22 @@ footer {
 }
 
 @media (min-width:750px) {
+  .regulatory-content{
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .report-image{
+    max-width: 35vmin ;
+  }
+
+  .text-content-regulatory{
+    align-content: center;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+    line-height: 2vmin ;
+  }
+
   h1 { 
     font-size: 12vmin;
     line-height: 13vmin
@@ -598,6 +614,47 @@ footer {
   .block {
     font-size: 2.5vmin;
     padding: 6vmin;
+  }
+  .grid-past-report {
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: 50% 50%;
+  }   
+  .report-image-grid {
+    max-width: 30vmin;
+    margin-top: 10vmin;
+    justify-content: center;
+    
+  }
+  .background-grid{
+    background-color: var(--color-grey-grid);
+    padding: 50px 20px 100px 20px;
+    border: solid var(--color-grey);
+    border-width: thin;
+  }
+  .safety-observer-186, .safety-observer-185 {
+    border-right: 2px solid var(--color-grey);
+    border-width: thin;
+    padding: 0px 60px 50px 60px;
+  }
+  .safety-observer-184 {
+    border-width: thin;
+    padding: 0px 60px 50px 60px;
+  }
+  
+  .month-year-content{
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .month-plan{
+    padding: 30px 18px 50px 18px;
+    margin-top: 3vmin ;
+  }
+
+  .year-plan{
+    padding: 30px 18px 50px 18px;
+    margin-top: 3vmin ;
+    gap:3vmin ;
   }
 
 }
